@@ -14,7 +14,7 @@ export default {
       tabsList:[
         {title:'首页',ex:''},
         {title:'办事',ex:''},
-        {title:'首页',ex:''},
+        {title:'',ex:''},
         {title:'公开',ex:''},
         {title:'我的',ex:''}
       ]
@@ -24,7 +24,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.tab{
+  position: fixed;
+  
+}
 </style>
 
 

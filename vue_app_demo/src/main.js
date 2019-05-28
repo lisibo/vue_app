@@ -10,6 +10,10 @@ import HUI from 'hui'
 import 'hui/dist/css/hui.min.css'
 Vue.use(HUI)
 
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
+
 import axios from 'axios'
 
 Vue.config.productionTip = false

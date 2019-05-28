@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import PublicRouter from './PublicRouter/index'
 
 Vue.use(Router)
 
@@ -9,6 +10,6 @@ export default new Router({
       path: '/',
       name: 'HomePage',
       component: ()=>import('@/views/Home/index')
-    }
+    },
   ]
 })
