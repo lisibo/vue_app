@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import PublicRouter from './PublicRouter/index'
 
 Vue.use(Router)
 
@@ -10,6 +9,21 @@ export default new Router({
       path: '/',
       name: 'HomePage',
       component: ()=>import('@/views/Home/index')
+    },
+    {
+      path: '/service',
+      name: 'Service',
+      component: ()=>import('@/views/Service/index')
+    },
+    {
+      path: '/public',
+      name: 'Public',
+      component: ()=>import('@/views/Public/index')
+    },
+    {
+      path: '/mine',
+      name: 'Mine',
+      component: ()=>import('@/views/Mine/index')
     },
   ]
 })
