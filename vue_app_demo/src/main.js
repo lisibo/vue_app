@@ -4,6 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import 'normalize.css'
+
+import HUI from 'hui'
+import 'hui/dist/css/hui.min.css'
+Vue.use(HUI)
+
+import axios from 'axios'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
