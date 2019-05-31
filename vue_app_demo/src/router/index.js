@@ -25,5 +25,10 @@ export default new Router({
       name: 'Mine',
       component: ()=>import('@/views/Mine/index')
     },
+    {
+      path: '/register',
+      name: 'Register',
+      component: ()=>import('@/views/Home/Register')
+    },
   ]
 })
