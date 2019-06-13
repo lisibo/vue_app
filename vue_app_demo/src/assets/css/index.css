@@ -1,0 +1,29 @@
+.tabs-title{
+  color: #888888;
+}
+.router-link-active .tabs-title{
+  color: red;
+}
+body{
+  font-family: PingFangSC-Medium !important;
+}
+/* 弹出层 */
+.example-popup{
+  width: 100%;
+  height: 90%;
+}
+/* 标题头 */
+.mine-person-wrapper{
+  padding:0.6rem 0.5rem 0;
+  overflow: hidden;
+}
+/* placeholder 置后 */
+input::-ms-input-placeholder{text-align: right;}
+input::-webkit-input-placeholder{text-align: right;}
+
+/* 没有数据显示样式 */
+.nothing{
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}

@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <router-view/>
-    <tabs-bottom></tabs-bottom>
+    <router-view />
+    <tabs-bottom />
   </div>
 </template>
 
 <script>
-import tabsBottom from '@/components/Tabs/tabsBottom.vue'
+import tabsBottom from '@/views/Tabs/tabsBottom.vue'
 export default {
   name: 'App',
   components:{

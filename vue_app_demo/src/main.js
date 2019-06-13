@@ -3,8 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 
 import 'normalize.css'
+import '@/assets/css/index.css'
+import '@/assets/fonts/iconfont.css'
 
 import HUI from 'hui'
 import 'hui/dist/css/hui.min.css'
@@ -15,6 +18,17 @@ import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
 
 import axios from 'axios'
+import '@/permission.js'
+
+;(function () {
+  resize();
+  window.onresize = function () {
+    resize()
+  }
+  function resize() {
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px'
+  }
+})();
 
 Vue.config.productionTip = false
 
@@ -22,6 +36,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
