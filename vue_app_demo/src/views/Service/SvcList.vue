@@ -1,11 +1,11 @@
 <template>
   <div class="svc-list">
-    <div class="navigation-bar">
-      <div class="icon-box" @click="goBack">
-        <Icon class="navigation-arrow" type="arrow-left"></Icon>
-      </div>
-      <span class="navigation-title">缴费类</span>
-    </div>
+    <!-- 顶部导航 -->
+    <mt-header title="缴费类" class="header">
+      <router-link to slot="left">
+        <mt-button icon="back" @click="$router.back(-1)"></mt-button>
+      </router-link>
+    </mt-header>
     <!-- 列表 -->
     <div class="sev-list">
       <div class="sev-cell" @click="SvcHandle">
@@ -38,10 +38,9 @@ export default {
   methods: {
     goBack() {
       this.$router.back();
-      console.log(1111);
     },
     // 独生子女证办理(办理类)
-    goHandle() {
+    SvcHandle() {
       this.$router.push({ path: "/svcguide" });
     },
     // 个人信息查询（查询类）
@@ -56,29 +55,7 @@ export default {
 .svc-list {
   width: 100vw;
   min-height: 100vh;
-  .navigation-bar {
-    width: 100%;
-    height: 1rem;
-    position: relative;
-    text-align: center;
-    border: 1px solid #f6f5f8;
-    margin-bottom: 0.2rem;
-    .icon-box {
-      width: 1rem;
-      height: 1rem;
-      position: absolute;
-      left: 0rem;
-      top: 0rem;
-    }
-    .navigation-arrow {
-      font: 0.4rem/1rem "宋体";
-    }
-    .navigation-title {
-      font: 0.34rem/1rem "PingFangSC-Medium";
-      color: #3e3e3e;
-      text-align: center;
-    }
-  }
+  background-color: #fff;
   .sev-list {
     width: 100%;
     border: 1px solid #f6f5f8;

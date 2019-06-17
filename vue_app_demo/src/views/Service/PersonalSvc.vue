@@ -1,11 +1,18 @@
 <template>
-  <div class="personal-svc">
-    <div class="navigation-bar">
-      <div class="icon-box" @click="goBack">
-        <Icon class="navigation-arrow" type="arrow-left"></Icon>
-      </div>
-      <span class="navigation-title">个人服务</span>
-    </div>
+  <div class="personal-svc page">
+    <!-- 顶部导航 -->
+    <mt-header title="独生子女父母光荣" class="header">
+      <router-link to slot="left">
+        <mt-button icon="back" @click="$router.back(-1)"></mt-button>
+      </router-link>
+      <mt-button slot="right" @click="collectHandle">
+        <!-- 未收藏 -->
+        <span class="iconfont iconunie601" v-if="collected==false"></span>
+        <!-- 已收藏 -->
+        <span class="iconfont iconshoucang1" v-else></span>
+      </mt-button>
+    </mt-header>
+
     <div class="example-tabs">
       <Tabs box=".example-tabs" :value="data.activeTab" :scrollable="true">
         <Pane id="all-inner" label="主体服务" name="all-inner">
@@ -258,6 +265,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import "../../assets/css/global.css";
 .personal-svc {
   .navigation-bar {
     width: 100%;
