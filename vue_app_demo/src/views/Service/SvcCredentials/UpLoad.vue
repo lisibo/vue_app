@@ -16,12 +16,15 @@
         <span class="blueline"></span>
         <span class="title">身份证（男）</span>
       </div>
-      <div class="up-box" @click="upLoadHandle">
-        <div class="up-item">
-          <Icon type="add" class="add"></Icon>
-          <span>请上传身份证正面照片</span>
+      <input type="file" name="file" id="man-upload">
+      <label for="man-upload">
+        <div class="up-box man-upload" @click="upLoadHandle">
+          <div class="up-item">
+            <Icon type="add" class="add"></Icon>
+            <span>请上传身份证正面照片</span>
+          </div>
         </div>
-      </div>
+      </label>
       <div class="top-title">
         <span class="blueline"></span>
         <span class="title">身份证（女）</span>
