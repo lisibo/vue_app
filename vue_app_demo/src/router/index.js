@@ -7,6 +7,14 @@ Vue.use(Router)
 export default new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: [
+    // {
+    //   path:'/aaa',
+    //   component:()=>import('@/pages/aaa')
+    // },
+    {
+      path: '/',
+      redirect:'/home'
+    },
     {
       path:'/login',//登录
       name: 'Login',
@@ -16,10 +24,6 @@ export default new Router({
       path:'/registe',//注册
       name: 'Registe',
       component: ()=>import('@/pages/registe')
-    },
-    {
-      path: '/',
-      redirect:'/home'
     },
     {
       path:'/home',

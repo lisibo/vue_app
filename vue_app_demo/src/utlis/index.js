@@ -1,3 +1,4 @@
+
 //年月日
 export function formatDate (secs) {
   var t = new Date(secs)
@@ -36,6 +37,7 @@ export function formatDateMin (secs) {
 export function validateYZM(){
 
 }
+
 // 手机号格式校验 
 export function validateTel(telValue){
   if(!(/^1(3|4|5|7|8)\d{9}$/.test(telValue))){

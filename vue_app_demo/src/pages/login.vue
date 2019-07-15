@@ -10,9 +10,9 @@
     </ul>
 
     <div class="login-form">
-      <mt-field label="用户名" placeholder="请输入用户名/手机号/身份证号" v-model="username"></mt-field>
-      <mt-field label="密码" placeholder="请输入密码" type="password" v-model="password"></mt-field>
-      <mt-field label="验证码" v-model="captcha" placeholder="请输入验证码">
+      <mt-field label="用户名" placeholder="请输入用户名/手机号/身份证号" v-model="loginInfo.username"></mt-field>
+      <mt-field label="密码" placeholder="请输入密码" type="password" v-model="loginInfo.password"></mt-field>
+      <mt-field label="验证码" v-model="loginInfo.captcha" placeholder="请输入验证码">
         <img src="../assets/images/logo@3x.png" height="48px" width="124px">
       </mt-field>
 
@@ -27,7 +27,7 @@
       </ul>
 
       <div class="login-btn">
-        <mt-button type="primary">登录</mt-button>
+        <mt-button type="primary" @click="handleLogin">登录</mt-button>
       </div>
 
       <div class="other-login">
@@ -79,6 +79,7 @@
 </div>
 </template>
 <script>
+import {mapActions} from 'vuex'
 export default {
   name:'Login',
   data(){
@@ -99,11 +100,18 @@ export default {
         {type:'法人登录'}
       ],
       currentIndex:0,
-      isShow:false,
-      username:'',
-      password:'',
-      captcha:'',
+      isShow:true,
+      loginInfo:{
+        username:'',
+        password:'123',
+        captcha:''
+      }
     }
+  },
+  watch:{
+    // $route(newVal,oldVal){
+    //   console.log(newVal,oldVal)
+    // }
   },
   methods: {
     registe(){
@@ -119,6 +127,11 @@ export default {
       }else{
         this.isShow = false
       }
+    },
+    handleLogin(){
+      this.$store.dispatch('mine/login',this.loginInfo).then((res)=>{
+        console.log(res)
+      })  
     }
   }
 }
